@@ -1,0 +1,11 @@
+[Unit]
+Description=Python Based Fan Control
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/tim/Nextcloud/TimDocs/Development/workspace/PyCharm/pyfan/pyfan_service.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,40 @@
+
+hwmon7 = "/sys/devices/platform/w83627ehf.656/hwmon/hwmon7/"
+hwmon0 = "/sys/devices/platform/coretemp.0/hwmon/hwmon0/"
+
+FAN1_ENABLE = 1
+FAN1_HW = hwmon7
+FAN1_HW_TEMP = hwmon0
+FAN1_HW_TEMP_SENSOR = [2, 3, 4, 10, 11, 12]
+FAN1_MIN_PWM = 0
+FAN1_MAX_PWM = 255
+FAN1_MIN_TEMP = 48
+FAN1_MAX_TEMP = 65
+
+FAN2_ENABLE = 1
+FAN2_HW = hwmon7
+FAN2_HW_TEMP = hwmon0
+FAN2_HW_TEMP_SENSOR = [2, 3, 4, 10, 11, 12]
+FAN2_MIN_PWM = 55
+FAN2_MAX_PWM = 255
+FAN2_MIN_TEMP = 44
+FAN2_MAX_TEMP = 65
+
+FAN3_ENABLE = 1
+FAN3_HW = hwmon7
+FAN3_HW_TEMP = hwmon0
+FAN3_HW_TEMP_SENSOR = [2, 3, 4, 10, 11, 12]
+FAN3_MIN_PWM = 0
+FAN3_MAX_PWM = 3
+FAN3_MIN_TEMP = 60
+FAN3_MAX_TEMP = 70
+
+FAN4_ENABLE = 1
+FAN4_HW = hwmon7
+FAN4_HW_TEMP = hwmon0
+FAN4_HW_TEMP_SENSOR = [2, 3, 4, 10, 11, 12]
+FAN4_MIN_PWM = 0
+FAN4_MAX_PWM = 255
+FAN4_MIN_TEMP = 48
+FAN4_MAX_TEMP = 65
+
