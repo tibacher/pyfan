@@ -132,7 +132,7 @@ def control_fans(fan_numbers=[1, 2, 3, 4], old_pwm_values=None):
             # print(int(fanpwm))
 
             if old_pwm_values is not None:
-                alpha = 0.75 # smoothing value
+                alpha = 0.7 # smoothing value
                 fanpwm = int(old_pwm_values[fan_number] * alpha + fanpwm * (1 - alpha))
             pwm_values[fan_number] = int(fanpwm)
             set_fanspeed(hw_path, fan_number, int(fanpwm))
