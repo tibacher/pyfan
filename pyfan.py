@@ -129,10 +129,9 @@ def control_fans(fan_numbers=[1, 2, 3, 4], old_pwm_values=None):
 
             fanpwm = max(min_pwm,
                          min(max_pwm, min_pwm + ((temp - min_temp) * (max_pwm - min_pwm)) / (max_temp - min_temp)))
-            # print(int(fanpwm))
 
             if old_pwm_values is not None:
-                alpha = 0.82 # smoothing value
+                alpha = 0.85 # smoothing value
                 fanpwm = int(old_pwm_values[fan_number] * alpha + fanpwm * (1 - alpha))
             pwm_values[fan_number] = int(fanpwm)
             set_fanspeed(hw_path, fan_number, int(fanpwm))
@@ -143,7 +142,7 @@ def fan_control_service(fan_numbers=[1, 2, 3, 4],DEBUG=False):
     old_values = None
     while True:
         old_values = control_fans(fan_numbers, old_values)
-        time.sleep(3)
+        time.sleep(6)
         if DEBUG:
             print("mean: {0:.2f}°C".format(mean_cpu_temp(hwmon0)) + "\t" + "max: {0:.2f}°C".format(
                 max_cpu_temp(hwmon0)))
