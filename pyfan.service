@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /home/tim/Nextcloud/TimDocs/Development/workspace/PyCharm/pyfan/pyfan_service.py
+ExecStart=/home/tim/Nextcloud/TimDocs/Development/workspace/PyCharm/pyfan/venv/bin/python /home/tim/Nextcloud/TimDocs/Development/workspace/PyCharm/pyfan/pyfan_service.py
 Restart=on-failure
 
 [Install]

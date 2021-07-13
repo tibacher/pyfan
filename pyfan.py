@@ -1,6 +1,6 @@
 import subprocess
 import time
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 from FAN_CONFIG import *
 
 
@@ -144,7 +144,7 @@ def fan_control_service(fan_numbers=[1, 2, 3, 4],DEBUG=False):
         old_values = control_fans(fan_numbers, old_values)
         time.sleep(6)
         if DEBUG:
-            print("mean: {0:.2f}°C".format(mean_cpu_temp(hwmon0)) + "\t" + "max: {0:.2f}°C".format(
+            print("mean: {0:.2f} C".format(mean_cpu_temp(hwmon0)) + "\t" + "max: {0:.2f} C".format(
                 max_cpu_temp(hwmon0)))
             print("pwmvalues:")
             print(old_values)
