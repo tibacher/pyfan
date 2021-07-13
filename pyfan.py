@@ -142,7 +142,7 @@ def fan_control_service(fan_numbers=[1, 2, 3, 4],DEBUG=False):
     old_values = None
     while True:
         old_values = control_fans(fan_numbers, old_values)
-        time.sleep(6)
+        time.sleep(10)
         if DEBUG:
             print("mean: {0:.2f} C".format(mean_cpu_temp(hwmon0)) + "\t" + "max: {0:.2f} C".format(
                 max_cpu_temp(hwmon0)))
